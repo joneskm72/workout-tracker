@@ -45,7 +45,6 @@ const WorkoutSchema = new Schema({
   }
 }
 );
-​
 // adds a dynamically-created property to schema
 WorkoutSchema.virtual("totalDuration").get(function () {
 // "reduce" array of exercises down to just the sum of their durations
