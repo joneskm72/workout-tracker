@@ -8,9 +8,11 @@ const router = require("express").Router();
     }).catch(err => res.json(err))
   });
 
-
   router.post("/api/workouts", function(req, res) {
-   Workout.create({}).then(dbWorkout => res.json(dbWorkout)).catch(err => res.json(err))
+   Workout.create({}).then(dbWorkout => {
+     res.json(dbWorkout)
+   }).catch(err => { res.json(err)
+   })
   });
 
    router.put("/api/workouts/:id", (req, res) => {
@@ -20,7 +22,7 @@ const router = require("express").Router();
    router.get("/api/workouts/range", (req, res) => {
     Workout.find({}).limit(7);
   });
-  
+
   router.delete("/api/workouts/:id", function(req, res) {
     Workout.findByIdAndDelete(req.body.id).then(() => res.json({ ok: true })).catch(err => res.status(500).json(err))
   });
