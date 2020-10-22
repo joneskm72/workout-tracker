@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 const app = express();
 
@@ -30,7 +30,6 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
-
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

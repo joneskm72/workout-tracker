@@ -13,12 +13,12 @@ const router = require("express").Router();
    Workout.create({}).then(dbWorkout => res.json(dbWorkout)).catch(err => res.json(err))
   });
 
-   router.put("/workout/:id", ({ body, params }, res) => {
-    Workout.findByIdAndUpdate(params.id,  {$push: {exercises: body}})
+   router.put("/workout/:id", (req, res) => {
+    Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}})
    })
 
-  router.delete("/notes/:id", function(req, res) {
-    Notes.removeNote(req.params.id).then(() => res.json({ ok: true })).catch(err => res.status(500).json(err))
+  router.delete("/workout/:id", function(req, res) {
+    Workout.findByIdAndDelete(req.body.id).then(() => res.json({ ok: true })).catch(err => res.status(500).json(err))
   });
 
 
