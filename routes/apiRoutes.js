@@ -5,23 +5,26 @@ const router = require("express").Router();
   router.get("/api/workouts", function(req, res) {
     Workout.find().then((dbWorkout) => {
       res.json(dbWorkout)
-    }).catch(err => {
-      res.json(err)
     })
+    .catch(err => {
+      res.json(err)
+    });
   });
 
   router.post("/api/workouts", function(req, res) {
    Workout.create({}).then(dbWorkout => {
      res.json(dbWorkout)
    })
-   .catch(err => { res.json(err)
-   })
+   .catch(err => {
+     res.json(err)
+   });
   });
 
    router.put("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}}, { new: true, runValidators: true }).then(workout => {
       res.json(workout);
-    }).catch(err => {
+    })
+    .catch(err => {
       res.json(err);
     });
    });
