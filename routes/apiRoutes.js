@@ -5,13 +5,16 @@ const router = require("express").Router();
   router.get("/api/workouts", function(req, res) {
     Workout.find().then((dbWorkout) => {
       res.json(dbWorkout)
-    }).catch(err => res.json(err))
+    }).catch(err => {
+      res.json(err)
+    })
   });
 
   router.post("/api/workouts", function(req, res) {
    Workout.create({}).then(dbWorkout => {
      res.json(dbWorkout)
-   }).catch(err => { res.json(err)
+   })
+   .catch(err => { res.json(err)
    })
   });
 
@@ -24,7 +27,12 @@ const router = require("express").Router();
   });
 
   router.delete("/api/workouts/:id", function(req, res) {
-    Workout.findByIdAndDelete(req.body.id).then(() => res.json({ ok: true })).catch(err => res.status(500).json(err))
+    Workout.findByIdAndDelete(req.body.id).then(() => {
+      res.json({ ok: true })
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
   });
 
 
