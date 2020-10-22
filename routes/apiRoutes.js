@@ -19,20 +19,30 @@ const router = require("express").Router();
   });
 
    router.put("/api/workouts/:id", (req, res) => {
-    Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}})
+    Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}}, { new: true, runValidators: true }).then(workout => {
+      res.json(workout);
+    }).catch(err => {
+      res.json(err);
+    });
    });
 
    router.get("/api/workouts/range", (req, res) => {
-    Workout.find({}).limit(7);
+    Workout.find({}).limit(7).then(dbWorkouts => {
+      console.log(dbWorkouts)
+      res.json(dbWorkouts);
+    })
+    .catch(err => {
+      res.json(err);
+    });
   });
 
   router.delete("/api/workouts/:id", function(req, res) {
     Workout.findByIdAndDelete(req.body.id).then(() => {
-      res.json({ ok: true })
+      res.json(true);
     })
     .catch(err => {
-      res.status(500).json(err)
-    })
+      res.status(200).json(err)
+    });
   });
 
 
