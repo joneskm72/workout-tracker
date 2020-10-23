@@ -1,57 +1,60 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Table of Contents
 
-## User Story
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Features](#features)
+* [How to Use](#how-to-use)
+* [Application Demo](#application-demo)
+* [Application Link](#application-link)
+* [License](#license)
+* [Contact](#contact)
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## General Info
 
-## Business Context
+An application that allows users to view, create, and track daily workouts. Users are able to log multiple exercises in a workout on a given day. Users can also track the name, type, weight, sets, reps, and duration of exercises. If the exercise is a cardio exercise, users are also able to track the distance they have traveled.
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+## Technologies
 
-## Acceptance Criteria
+* HTML
+* JavaScript
+* MongoDB
+* Mongoose
+* Express
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+## Features
 
-The user should be able to:
 
-  * Add exercises to a previous workout plan.
+## How to Use
 
-  * Add new exercises to a new workout plan.
+To run this application locally:
 
-  * View the combined weight of multiple exercises on the `stats` page.
+* Clone or download the repository
+* Open the code in your preferred code editor
+* Open the integrated terminal in the code editor
+* Run npm install in the terminal
+* Enter nodemon server.js in the terminal
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+After following these steps, open your preferred browser and navigate to http://localhost:3030/
 
-  * [Set Up MongoDB Atlas](../important/MongoAtlas-Setup.md)
+## Application Demo
 
-  * [Deploy with Heroku and MongoDB Atlas](../important/MongoAtlas-Deploy.md)
+<img src="assets/images/last-workout.png" width="500" />
 
-## Commit Early and Often
+<img src="assets/images/stats.png" width="500" />
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+## Application Link
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+[Workout Tracker](https://workout-tracker-kasey.herokuapp.com/)
 
-Follow these guidelines for committing:
+## License
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+## Contact
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+* Email: jones.m.kasey@gmail.com
 
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+* GitHub: https://github.com/joneskm72
