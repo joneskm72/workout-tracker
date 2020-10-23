@@ -21,8 +21,8 @@ const router = require("express").Router();
   });
 
    router.put("/api/workouts/:id", (req, res) => {
-    Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}}, { new: true, runValidators: true }).then(workout => {
-      res.json(workout);
+    Workout.findByIdAndUpdate(req.params.id,  {$push: {exercises: req.body}}, { new: true, runValidators: true }).then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.json(err);
