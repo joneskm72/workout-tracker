@@ -30,7 +30,7 @@ const router = require("express").Router();
    });
 
    router.get("/api/workouts/range", (req, res) => {
-    Workout.find({}).sort({ "date": -1 })
+    Workout.find({}).sort({ "day": -1 })
     .limit(7).then(dbWorkout => {
       console.log(dbWorkout);
       res.json(dbWorkout);
