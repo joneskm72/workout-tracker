@@ -2,7 +2,7 @@ const Workout = require("../models/workout.js");
 const router = require("express").Router();
 
 
-  router.get("/api/workouts", function(req, res) {
+  router.get("/api/workouts", (req, res) => {
     Workout.find().then((dbWorkout) => {
       res.json(dbWorkout)
     })
@@ -11,7 +11,7 @@ const router = require("express").Router();
     });
   });
 
-  router.post("/api/workouts", function(req, res) {
+  router.post("/api/workouts", (req, res) => {
    Workout.create({}).then(dbWorkout => {
      res.json(dbWorkout)
    })
