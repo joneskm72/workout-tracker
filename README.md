@@ -4,8 +4,7 @@
 
 * [General Info](#general-info)
 * [Technologies](#technologies)
-* [Features](#features)
-* [How to Use](#how-to-use)
+* [Installation](#installation)
 * [Application Demo](#application-demo)
 * [Application Link](#application-link)
 * [License](#license)
@@ -22,11 +21,9 @@ An application that allows users to view, create, and track daily workouts. User
 * MongoDB
 * Mongoose
 * Express
+* Node
 
-## Features
-
-
-## How to Use
+## Installation
 
 To run this application locally:
 
